@@ -18,9 +18,10 @@ namespace ScrabbleScore
     [Fact]
     public void Convert_StringTo_Score()
     {
-      Scrabble newScrabble = newScrabble();
-      int testScore = 5;
-      int resultScore = newScrabble.GetScore(newScrabble.ConverString("hello"));
+      Scrabble newScrabble = new Scrabble();
+      char [] resultArray = new char[] {'a', 'e', 'i', 'o', 'u'};
+      int resultScore = newScrabble.GetScore(resultArray);
+      Assert.Equal(5, resultScore);
     }
   }
 }

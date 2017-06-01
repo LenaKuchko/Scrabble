@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System;
 
 namespace ScrabbleScore.Objects
 {
@@ -15,7 +16,7 @@ namespace ScrabbleScore.Objects
     public int GetScore(char [] wordArray)
     {
       int count = 0;
-      for(int i = 0; i <= wordArray.Length; i++)
+      for(int i = 0; i < wordArray.Length; i++)
       {
         if (wordArray[i] == 'a' || wordArray[i] == 'e' ||  wordArray[i] == 'i' ||  wordArray[i] == 'o' ||  wordArray[i] == 'u' ||  wordArray[i] == 'l' ||  wordArray[i] == 'n' ||  wordArray[i] == 'r' ||  wordArray[i] == 's' ||  wordArray[i] == 't')
         {
@@ -49,8 +50,9 @@ namespace ScrabbleScore.Objects
         {
           count += 0;
         }
-        return count;
       }
+      Console.WriteLine(count);
+      return count;
     }
   }
 }
